@@ -13,6 +13,7 @@ import {db} from '../data/guitarras.js'
 import GuitarraComponent from '../components/GuitarraComponent.vue';
 
 const guitarras = ref([])
+const cartShop = ref([])
 
 onMounted(()=>{
   guitarras.value = db;
@@ -20,7 +21,9 @@ onMounted(()=>{
 })
 
 const sendToCart = (guitar) => {
-    console.log(guitar)
-    alert('Product add to cart!')
-}
+    
+    cartShop.value.push(guitar)
+    console.log(cartShop.value)
+ }
+
 </script>

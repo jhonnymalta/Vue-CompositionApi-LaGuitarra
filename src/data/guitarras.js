@@ -17,4 +17,13 @@ export const db = [
         price: 3936.63,
 
     },
+    {
+        id:3,
+        fabricant:'Giannini',
+        image:'VUE-GUITAR-001',
+        title:'Guitarra Giannini GMW84 | Masterwood Sonic | 3-Tone Sunburst',
+        description : 'Guitarra Giannini GMW84 Pau-Ferro, da linha Masterwood, estilo Tele, fabricada no Brasil, com captação HSS e ferragens Wilkinson, com tampo em Pau-Ferro.<p>Poucas coisas causam tanta ansiedade no mercado de instrumentos musicais quanto o retorno das guitarras Giannini com fabricação nacional – e isso não é modéstia, mas um fato. Tudo jamais poderia ser feito se não tomássemos de antemão os cuidados necessários para apresentar ao público um produto com o esmero que se esperaria de tão aguardada retomada, e que ao mesmo tempo apontasse para o futuro; algo que respeitasse tudo o que já foi construído desde os anos 60 (época de fabricação de nossas primeiras guitarras) e que também trouxesse novidades para quem ansiava não apenas por nostalgia, mas principalmente por qualidade.</p>',
+        price: 3936.63,
+
+    },
 ]
