@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class=" w-[15%]">
         <div>
             <div>OFF</div>
             <div>Favorito</div>
@@ -8,7 +8,7 @@
             <img :src="`/images/${guitarra.image}.png`" alt=" Imagem guitarra" style="max-height: 40vh;">
         </div>
         <div>{{guitarra.title}}</div>
-        <div>{{guitarra.description}}</div>
+        <p class="truncate">{{guitarra.description}}</p>
         <div>${{guitarra.price}}</div>
         <div>
             <button @click="$emit('sendToCart',guitarra)" class="bg-blue-500 text-white px-4 py-2 rounded-[6px]">Adicionar</button>
