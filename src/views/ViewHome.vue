@@ -29,8 +29,7 @@ let { guitarras,addGuitarras } = store
 
 
 
-const sendToCart = (guitar) => {
-    
+const sendToCart = (guitar) => {  
   addGuitarras(guitar)
     
  }

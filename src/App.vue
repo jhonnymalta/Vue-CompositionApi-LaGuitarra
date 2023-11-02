@@ -4,13 +4,10 @@
   <header-component 
     :shopCart="shopCart"
   />
-  <ViewHome/>
+  <router-view/>
 </template>
 
 <script setup>
-
-
-import ViewHome from './views/ViewHome.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 
 

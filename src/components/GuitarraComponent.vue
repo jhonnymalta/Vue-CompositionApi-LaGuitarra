@@ -1,11 +1,14 @@
 <template>
+    
     <div class=" w-[15%]">
         <div>
             <div>OFF</div>
             <div>Favorito</div>
         </div>
         <div>
-            <img :src="`/images/${guitarra.image}.png`" alt=" Imagem guitarra" style="max-height: 40vh;">
+            <router-link :to="`/guitar/${guitarra.id}`" >           
+            <img :src="`/images/${guitarra.image}.jpg`" alt=" Imagem guitarra" style="max-height: 40vh;">
+        </router-link>
         </div>
         <div>{{guitarra.title}}</div>
         <p class="truncate">{{guitarra.description}}</p>
