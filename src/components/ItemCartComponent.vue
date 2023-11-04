@@ -19,7 +19,7 @@
               <span class="text-3xl bg-[#5555] px-4">{{ guitarra.qtd }}</span>
               <button @click="$emit('increase-item',guitarra.id)">+</button>
             </div>
-            <button class="bg-red-500 px-4 py-2" @click="$emit('delete-Item',2)">Remove</button>
+            <button class="bg-red-500 px-4 py-2" @click="$emit('delete-Item',guitarra.id)">Remove</button>
         </div>
     </div>
 </template>

@@ -1,13 +1,15 @@
 <template>
     <h2>Cart View</h2>
     <div class="container mx-auto grid grid-cols-3 gap-4">
-        <div v-if="cartShop.length != 0" class="col-span-2">
-            <div>banner</div>
+        
+        <div v-if="cartShop.length != 0" class="col-span-2">   
+            <img :src="`/images/banerCartGuitar.jpg`" alt="Banner Cart" >        
             <div>
                 <ItemCart v-for="item in cartShop" :key="item.id"
                 @delete-item="deleteItem"
                 @increase-item="increaseItem"
                 @decrease-item="decreaseItem"
+                
                 :guitarra="item"
                 />
             </div>
@@ -34,20 +36,33 @@
     </div>
 </template>
 <script setup>
-import { computed } from 'vue'
+import { useRouter } from 'vue-router';
+import { computed, onMounted} from 'vue'
 import ItemCart from '../components/ItemCartComponent.vue'
 import { useCartStore } from './../stores/Cart.js'
 
-const store = useCartStore()
 
-let { cartShop, decreaseQTD ,increaseQTD} = store 
+
+
+
+
+
+const store = useCartStore()
+const router = useRouter()
+
+
+let { cartShop, decreaseQTD ,increaseQTD,deleteItemFromCard,addGuitarras} = store 
+
+
 
 const totalCartprice = computed(()=>{
     return cartShop.reduce((total,produto)=>total + produto.price  * produto.qtd,0)
 })
 
-const deleteItem = (id) =>{
-    console.log('deletar item '+id)
+const deleteItem = (id) =>{    
+    deleteItemFromCard(id)
+    return cartShop
+    
 }
 
 const increaseItem = (id) =>{    
@@ -56,10 +71,12 @@ const increaseItem = (id) =>{
 const decreaseItem = (id) =>{   
     decreaseQTD(id)
 }
-const sendToCart = (guitar) => {  
-  addGuitarras(guitar)
-    
+const sendToCart = (guitar) => {     
+  addGuitarras(guitar)    
  }
+
+ 
+ 
 
 
 

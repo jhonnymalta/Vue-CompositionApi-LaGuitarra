@@ -1,6 +1,6 @@
 <template>
     
-    <div class=" w-[15%]">
+    <div class=" ">
         <div>
             <div>OFF</div>
             <div>Favorito</div>

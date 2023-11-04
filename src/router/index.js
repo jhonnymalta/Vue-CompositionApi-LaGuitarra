@@ -14,10 +14,16 @@ const router = createRouter({
             component: () => import('../views/CartView.vue')
         },
         {
+            path:'/form',
+            name:'form',
+            component: () => import('../views/FormView.vue')
+        },
+        {
             path:'/guitar/:id',
             name:'guitar',
             component: () => import('../views/GuitarView.vue')
         },
+       
     ]
 })
 export default router

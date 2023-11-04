@@ -1,7 +1,7 @@
 <template>
-   <h2>home view</h2>
   
-  <div class="container mx-auto flex"> 
+  
+  <div class="container mx-auto grid grid-cols-4 gap-4"> 
    
    
     <GuitarraComponent v-for="guitar in guitarras" :key="guitar.id"
@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import {onMounted,onBeforeMount, watch, ref} from 'vue'
+import { ref} from 'vue'
 
 import GuitarraComponent from '../components/GuitarraComponent.vue';
 import { useCartStore } from './../stores/Cart.js'
@@ -25,6 +25,7 @@ import { useCartStore } from './../stores/Cart.js'
 const store = useCartStore()
 
 let { guitarras,addGuitarras } = store 
+
 
 
 
